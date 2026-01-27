@@ -1,164 +1,258 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ismail Egilmez — Enterprise SaaS & Observability</title>
+  <title>Ismail Egilmez</title>
 
-  <link rel="icon" href="favicon.ico" />
-
+  <!-- Tailwind v3 (Dark mode supported) -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class'
+    }
+  </script>
+
+  <!-- Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-  <style>
-    html { scroll-behavior: smooth; }
-  </style>
+  <!-- Dark mode init -->
+  <script>
+    if (
+      localStorage.theme === 'dark' ||
+      (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
+    ) {
+      document.documentElement.classList.add('dark')
+    } else {
+      document.documentElement.classList.remove('dark')
+    }
+  </script>
 </head>
 
-<body class="bg-gray-900 text-gray-100">
+<body class="min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors">
 
-<!-- HEADER -->
-<header class="fixed top-0 w-full z-50 bg-gray-900/95 backdrop-blur border-b border-gray-800">
-  <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
-    <span class="font-semibold">Ismail Egilmez</span>
+  <!-- HEADER -->
+  <header class="bg-white dark:bg-gray-800 shadow fixed w-full z-10">
+    <div class="container mx-auto flex justify-between items-center p-4">
+      <h1 class="text-2xl font-bold">Ismail Egilmez</h1>
 
-    <nav class="flex gap-5 text-sm">
-      <a href="#hero" class="hover:text-blue-400">Home</a>
-      <a href="#about" class="hover:text-blue-400">About</a>
-      <a href="#experience" class="hover:text-blue-400">Experience</a>
-      <a href="#education" class="hover:text-blue-400">Education</a>
-      <a href="https://www.linkedin.com/in/ismailegilmez/" target="_blank">LinkedIn</a>
-      <a href="https://thenewstack.io/author/ismail-egilmez/" target="_blank">TNS</a>
-      <a href="Ismail_Egilmez_CV.pdf" target="_blank" class="text-blue-400 font-medium">Download CV</a>
-    </nav>
-  </div>
-</header>
+      <nav class="flex items-center space-x-6">
+        <ul class="flex space-x-6">
+          <li><a href="#hero" class="hover:text-blue-600">Home</a></li>
+          <li><a href="#about" class="hover:text-blue-600">About</a></li>
+          <li><a href="#experience" class="hover:text-blue-600">Experience</a></li>
+          <li><a href="#education" class="hover:text-blue-600">Education</a></li>
 
-<!-- HERO -->
-<section id="hero"
-  class="relative h-[65vh] flex items-center justify-center bg-cover bg-center pt-24"
-  style="background-image:url('hero.webp')">
+          <li>
+            <a href="https://www.linkedin.com/in/ismailegilmez/"
+               target="_blank" rel="noopener noreferrer"
+               class="hover:text-blue-600">
+              LinkedIn
+            </a>
+          </li>
 
-  <div class="absolute inset-0 bg-black/65"></div>
+          <li>
+            <a href="https://thenewstack.io/author/ismail-egilmez/"
+               target="_blank" rel="noopener noreferrer"
+               class="hover:text-blue-600">
+              TNS
+            </a>
+          </li>
 
-  <div class="relative z-10 max-w-2xl text-center px-6">
-    <div class="bg-black/70 backdrop-blur rounded-xl px-8 py-8 shadow-lg">
-      <h1 class="text-3xl md:text-4xl font-bold mb-3">
-        Hi, I’m <span class="text-blue-400">Ismail</span>.
-      </h1>
+          <li>
+            <a href="Ismail_Egilmez_CV.pdf"
+               target="_blank" rel="noopener noreferrer"
+               class="font-medium hover:text-blue-600">
+              Download CV
+            </a>
+          </li>
+        </ul>
 
-      <p class="text-gray-300 mb-2">
-        Enterprise SaaS · Observability · Go-To-Market
-      </p>
+        <!-- Dark mode toggle -->
+        <button
+          onclick="toggleDarkMode()"
+          class="border rounded-full px-3 py-1 text-sm hover:bg-gray-100 dark:hover:bg-gray-700">
+          🌙
+        </button>
+      </nav>
+    </div>
+  </header>
 
-      <p class="text-gray-400 mb-5 text-sm">
-        Driving enterprise growth across mission-critical technology platforms.
-      </p>
+  <main class="pt-24">
 
-      <div class="flex justify-center gap-4">
-        <a href="https://www.linkedin.com/in/ismailegilmez/" target="_blank" class="icon-btn">
-          <i class="fab fa-linkedin"></i>
+    <!-- HERO -->
+    <section id="hero" class="relative bg-cover bg-center" style="background-image: url('hero.webp');">
+      <div class="absolute inset-0 bg-gray-900 opacity-40"></div>
+
+      <div class="relative container mx-auto text-center py-28">
+        <div class="inline-block px-8 py-6 bg-black bg-opacity-70 backdrop-blur-md rounded-xl">
+          <h2 class="text-4xl md:text-5xl font-extrabold mb-3 text-white">
+            Hi, I’m <span class="text-blue-400">Ismail</span>.
+          </h2>
+
+          <p class="text-lg md:text-xl text-gray-200 mb-2">
+            Business Development & Go-To-Market Leader
+          </p>
+
+          <p class="max-w-2xl mx-auto text-gray-300">
+            Driving enterprise growth across SaaS, observability, and mission-critical technology domains.
+          </p>
+
+          <div class="mt-6 flex justify-center space-x-3">
+            <a href="https://www.linkedin.com/in/ismailegilmez/"
+               target="_blank" rel="noopener noreferrer"
+               class="border border-gray-300 p-3 rounded-lg bg-white bg-opacity-10 hover:bg-opacity-20">
+              <i class="fab fa-linkedin fa-lg text-white"></i>
+            </a>
+
+            <a href="https://thenewstack.io/author/ismail-egilmez/"
+               target="_blank" rel="noopener noreferrer"
+               class="border border-gray-300 p-3 rounded-lg bg-white bg-opacity-10 hover:bg-opacity-20">
+              <i class="fa-solid fa-newspaper fa-lg text-white"></i>
+            </a>
+
+            <a href="Ismail_Egilmez_CV.pdf"
+               target="_blank" rel="noopener noreferrer"
+               class="border border-gray-300 p-3 rounded-lg bg-white bg-opacity-10 hover:bg-opacity-20">
+              <i class="fa fa-file-pdf fa-lg text-white"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="container mx-auto py-16">
+      <div class="bg-white dark:bg-gray-800 shadow-lg rounded-2xl p-6 md:p-8">
+        <h3 class="text-3xl font-bold mb-4">About Me</h3>
+        <div class="space-y-4 leading-relaxed">
+          <p>
+            Senior business development and go-to-market leader with 15+ years of experience
+            driving growth across SaaS, telecommunications, critical infrastructure, and enterprise technology.
+          </p>
+          <p>
+            Experienced in shaping regional enterprise strategies, influencing C-level executives,
+            and leading complex, multi-stakeholder opportunities across EMEA and global markets.
+          </p>
+          <p>
+            I combine a computer engineering background with strong commercial acumen to position
+            technology as a business and operational enabler for large organizations.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="container mx-auto py-16">
+      <div class="bg-white dark:bg-gray-800 shadow-lg rounded-2xl p-6 md:p-8">
+        <h3 class="text-3xl font-bold mb-8">Experience</h3>
+
+        <div class="mb-8">
+          <h4 class="text-xl font-semibold">Catchpoint</h4>
+          <p class="text-blue-600 font-medium mb-2">
+            Business Development Representative – EMEA / International<br />
+            Apr 2023 – Present
+          </p>
+          <ul class="list-disc list-inside space-y-1">
+            <li>Driving international enterprise business development across EMEA and global markets.</li>
+            <li>Engaging C-level and senior IT/Operations leaders in mission-critical environments.</li>
+            <li>Shaping complex enterprise opportunities with AEs, SEs, and product teams.</li>
+            <li>Influencing high-value deals through stakeholder mapping and value positioning.</li>
+            <li>Consistently exceeding pipeline and opportunity creation targets.</li>
+          </ul>
+        </div>
+
+        <hr class="my-8 border-gray-200 dark:border-gray-700">
+
+        <div class="mb-8">
+          <h4 class="text-xl font-semibold">Thundra (Spin-off from OpsGenie / Atlassian)</h4>
+          <p class="text-blue-600 font-medium mb-2">
+            Sales & Business Development Manager – Global Markets<br />
+            Nov 2018 – Apr 2023
+          </p>
+          <ul class="list-disc list-inside space-y-1">
+            <li>Defined and executed global go-to-market strategy for SaaS and observability solutions.</li>
+            <li>Built strategic partnerships with AWS, Azure, Atlassian, PagerDuty, and ISVs.</li>
+            <li>Led complex enterprise sales cycles from early shaping through expansion.</li>
+            <li>Reduced customer churn from ~30% to below 5%.</li>
+            <li>Represented the company at international industry events.</li>
+          </ul>
+        </div>
+
+        <hr class="my-8 border-gray-200 dark:border-gray-700">
+
+        <div>
+          <h4 class="text-xl font-semibold">OpsGenie (Atlassian)</h4>
+          <p class="text-blue-600 font-medium mb-2">
+            Senior Account Executive<br />
+            Jan 2018 – Sep 2018
+          </p>
+          <ul class="list-disc list-inside space-y-1">
+            <li>Owned full-cycle international enterprise sales with quarterly targets.</li>
+            <li>Consistently exceeded quotas in competitive markets.</li>
+            <li>Drove pipeline creation, forecasting, and consultative deal execution.</li>
+            <li>Partnered with product and customer success teams to feed insights into roadmap prioritization.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education" class="container mx-auto py-16">
+      <div class="bg-white dark:bg-gray-800 shadow-lg rounded-2xl p-6 md:p-8">
+        <h3 class="text-3xl font-bold mb-6">Education & Certifications</h3>
+
+        <h4 class="text-xl font-semibold mb-2">Education</h4>
+        <ul class="list-disc list-inside mb-6 space-y-1">
+          <li>MBA — Middle East Technical University (2019)</li>
+          <li>M.Sc. — Hacettepe University (2015–2017)</li>
+          <li>B.Eng. — Başkent University (2002–2008)</li>
+        </ul>
+
+        <h4 class="text-xl font-semibold mb-2">Certifications</h4>
+        <ul class="list-disc list-inside space-y-1">
+          <li>Force Management Training (2023)</li>
+          <li>Sandler Sales Training (2018)</li>
+          <li>AWS Certified Cloud Practitioner</li>
+          <li>Cisco Certified Network Associate (CCNA)</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="container mx-auto py-16 text-center">
+      <h3 class="text-3xl font-bold mb-6">Contact</h3>
+      <div class="flex justify-center space-x-6">
+        <a href="https://www.linkedin.com/in/ismailegilmez/"
+           target="_blank" rel="noopener noreferrer"
+           class="border border-gray-300 p-3 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700">
+          <i class="fab fa-linkedin fa-lg"></i>
         </a>
-        <a href="https://thenewstack.io/author/ismail-egilmez/" target="_blank" class="icon-btn">
-          <i class="fa-solid fa-newspaper"></i>
-        </a>
-        <a href="Ismail_Egilmez_CV.pdf" target="_blank" class="icon-btn">
-          <i class="fa fa-file-pdf"></i>
+        <a href="mailto:i.egilmez@gmail.com"
+           class="border border-gray-300 p-3 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700">
+          <i class="fa fa-envelope fa-lg"></i>
         </a>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- ABOUT -->
-<section id="about" class="py-16">
-  <div class="max-w-5xl mx-auto px-6">
-    <div class="bg-gray-800 rounded-xl p-8 shadow">
-      <h2 class="text-2xl font-semibold mb-4">About Me</h2>
-      <p class="text-gray-300 leading-relaxed">
-        Business development and go-to-market leader with deep experience in enterprise SaaS,
-        observability, and complex global sales motions across EMEA and international markets.
-      </p>
-    </div>
-  </div>
-</section>
+  </main>
 
-<!-- EXPERIENCE -->
-<section id="experience" class="py-16">
-  <div class="max-w-5xl mx-auto px-6 space-y-8">
-    <h2 class="text-2xl font-semibold">Experience</h2>
+  <footer class="bg-white dark:bg-gray-800 shadow p-4 text-center">
+    <p class="text-sm text-gray-500">© 2026 Ismail Egilmez</p>
+  </footer>
 
-    <div class="bg-gray-800 rounded-xl p-8 shadow">
-      <h3 class="text-lg font-semibold">Catchpoint</h3>
-      <p class="text-blue-400 text-sm mb-3">Business Development Representative — Apr 2023 – Present</p>
-      <ul class="list-disc list-inside text-gray-300 space-y-1">
-        <li>Driving enterprise pipeline across EMEA and international markets.</li>
-        <li>Engaging C-level IT, SRE, and Digital Experience leaders.</li>
-        <li>Shaping complex opportunities with AEs and Solutions Engineers.</li>
-        <li>Consistently exceeding opportunity creation targets.</li>
-      </ul>
-    </div>
-
-    <div class="bg-gray-800 rounded-xl p-8 shadow">
-      <h3 class="text-lg font-semibold">Thundra (Spin-off from OpsGenie / Atlassian)</h3>
-      <p class="text-blue-400 text-sm mb-3">Sales & Business Development Manager — Nov 2018 – Apr 2023</p>
-      <ul class="list-disc list-inside text-gray-300 space-y-1">
-        <li>Led global go-to-market for observability and SaaS products.</li>
-        <li>Built strategic partnerships with AWS, Atlassian, and ISVs.</li>
-        <li>Reduced churn from ~30% to below 5%.</li>
-      </ul>
-    </div>
-
-    <div class="bg-gray-800 rounded-xl p-8 shadow">
-      <h3 class="text-lg font-semibold">OpsGenie (Atlassian)</h3>
-      <p class="text-blue-400 text-sm mb-3">Senior Account Executive — Jan 2018 – Sep 2018</p>
-      <ul class="list-disc list-inside text-gray-300 space-y-1">
-        <li>Owned full-cycle international enterprise sales.</li>
-        <li>Consistently exceeded quota in competitive markets.</li>
-        <li>Partnered with product teams to feed customer insights into roadmap planning.</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- EDUCATION -->
-<section id="education" class="py-16">
-  <div class="max-w-5xl mx-auto px-6">
-    <div class="bg-gray-800 rounded-xl p-8 shadow">
-      <h2 class="text-2xl font-semibold mb-4">Education & Certifications</h2>
-
-      <ul class="text-gray-300 space-y-2">
-        <li><strong>MBA</strong> — Middle East Technical University</li>
-        <li><strong>M.Sc.</strong> — Hacettepe University</li>
-        <li><strong>B.Eng.</strong> — Başkent University</li>
-        <li>AWS Certified Cloud Practitioner</li>
-        <li>Sandler Sales Training</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer class="border-t border-gray-800 py-6 text-center text-sm text-gray-500">
-  © 2026 Ismail Egilmez
-</footer>
-
-<style>
-  .icon-btn {
-    width: 42px;
-    height: 42px;
-    border-radius: 10px;
-    background: rgba(255,255,255,0.1);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all .2s ease;
-  }
-  .icon-btn:hover {
-    background: rgba(255,255,255,0.2);
-    transform: translateY(-2px);
-  }
-</style>
+  <script>
+    function toggleDarkMode() {
+      const html = document.documentElement
+      if (html.classList.contains('dark')) {
+        html.classList.remove('dark')
+        localStorage.theme = 'light'
+      } else {
+        html.classList.add('dark')
+        localStorage.theme = 'dark'
+      }
+    }
+  </script>
 
 </body>
 </html>
