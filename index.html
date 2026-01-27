@@ -5,30 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ismail Egilmez — Enterprise SaaS & Observability</title>
 
-  <!-- SEO -->
-  <meta name="description" content="Ismail Egilmez is a business development and go-to-market leader in enterprise SaaS and observability." />
-  <meta name="author" content="Ismail Egilmez" />
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="Ismail Egilmez — Enterprise SaaS & Observability" />
-  <meta property="og:description" content="Driving enterprise growth across mission-critical technology platforms." />
-  <meta property="og:image" content="https://ismailegilmez.github.io/hero.webp" />
-  <meta property="og:url" content="https://ismailegilmez.github.io" />
-  <meta property="og:type" content="website" />
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
-
-  <!-- Favicon -->
   <link rel="icon" href="favicon.ico" />
 
-  <!-- Tailwind v3 -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = { darkMode: 'class' }
-  </script>
-
-  <!-- Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <style>
@@ -39,11 +18,11 @@
 <body class="bg-gray-900 text-gray-100">
 
 <!-- HEADER -->
-<header class="fixed w-full z-50 bg-gray-900/90 backdrop-blur border-b border-gray-800">
+<header class="fixed top-0 w-full z-50 bg-gray-900/95 backdrop-blur border-b border-gray-800">
   <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
-    <span class="font-semibold text-lg">Ismail Egilmez</span>
+    <span class="font-semibold">Ismail Egilmez</span>
 
-    <nav class="flex items-center space-x-6 text-sm">
+    <nav class="flex gap-5 text-sm">
       <a href="#hero" class="hover:text-blue-400">Home</a>
       <a href="#about" class="hover:text-blue-400">About</a>
       <a href="#experience" class="hover:text-blue-400">Experience</a>
@@ -56,22 +35,23 @@
 </header>
 
 <!-- HERO -->
-<section id="hero" class="relative h-[85vh] flex items-center justify-center bg-cover bg-center"
+<section id="hero"
+  class="relative h-[65vh] flex items-center justify-center bg-cover bg-center pt-24"
   style="background-image:url('hero.webp')">
 
-  <div class="absolute inset-0 bg-black/50"></div>
+  <div class="absolute inset-0 bg-black/65"></div>
 
-  <div class="relative z-10 max-w-3xl text-center px-6">
-    <div class="bg-black/70 backdrop-blur rounded-2xl px-8 py-10 shadow-xl">
-      <h1 class="text-4xl md:text-5xl font-bold mb-4">
+  <div class="relative z-10 max-w-2xl text-center px-6">
+    <div class="bg-black/70 backdrop-blur rounded-xl px-8 py-8 shadow-lg">
+      <h1 class="text-3xl md:text-4xl font-bold mb-3">
         Hi, I’m <span class="text-blue-400">Ismail</span>.
       </h1>
 
-      <p class="text-lg text-gray-300 mb-2">
+      <p class="text-gray-300 mb-2">
         Enterprise SaaS · Observability · Go-To-Market
       </p>
 
-      <p class="text-gray-400 mb-6">
+      <p class="text-gray-400 mb-5 text-sm">
         Driving enterprise growth across mission-critical technology platforms.
       </p>
 
@@ -91,9 +71,9 @@
 </section>
 
 <!-- ABOUT -->
-<section id="about" class="py-20">
+<section id="about" class="py-16">
   <div class="max-w-5xl mx-auto px-6">
-    <div class="bg-gray-800 rounded-2xl p-8 shadow">
+    <div class="bg-gray-800 rounded-xl p-8 shadow">
       <h2 class="text-2xl font-semibold mb-4">About Me</h2>
       <p class="text-gray-300 leading-relaxed">
         Business development and go-to-market leader with deep experience in enterprise SaaS,
@@ -103,25 +83,79 @@
   </div>
 </section>
 
+<!-- EXPERIENCE -->
+<section id="experience" class="py-16">
+  <div class="max-w-5xl mx-auto px-6 space-y-8">
+    <h2 class="text-2xl font-semibold">Experience</h2>
+
+    <div class="bg-gray-800 rounded-xl p-8 shadow">
+      <h3 class="text-lg font-semibold">Catchpoint</h3>
+      <p class="text-blue-400 text-sm mb-3">Business Development Representative — Apr 2023 – Present</p>
+      <ul class="list-disc list-inside text-gray-300 space-y-1">
+        <li>Driving enterprise pipeline across EMEA and international markets.</li>
+        <li>Engaging C-level IT, SRE, and Digital Experience leaders.</li>
+        <li>Shaping complex opportunities with AEs and Solutions Engineers.</li>
+        <li>Consistently exceeding opportunity creation targets.</li>
+      </ul>
+    </div>
+
+    <div class="bg-gray-800 rounded-xl p-8 shadow">
+      <h3 class="text-lg font-semibold">Thundra (Spin-off from OpsGenie / Atlassian)</h3>
+      <p class="text-blue-400 text-sm mb-3">Sales & Business Development Manager — Nov 2018 – Apr 2023</p>
+      <ul class="list-disc list-inside text-gray-300 space-y-1">
+        <li>Led global go-to-market for observability and SaaS products.</li>
+        <li>Built strategic partnerships with AWS, Atlassian, and ISVs.</li>
+        <li>Reduced churn from ~30% to below 5%.</li>
+      </ul>
+    </div>
+
+    <div class="bg-gray-800 rounded-xl p-8 shadow">
+      <h3 class="text-lg font-semibold">OpsGenie (Atlassian)</h3>
+      <p class="text-blue-400 text-sm mb-3">Senior Account Executive — Jan 2018 – Sep 2018</p>
+      <ul class="list-disc list-inside text-gray-300 space-y-1">
+        <li>Owned full-cycle international enterprise sales.</li>
+        <li>Consistently exceeded quota in competitive markets.</li>
+        <li>Partnered with product teams to feed customer insights into roadmap planning.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education" class="py-16">
+  <div class="max-w-5xl mx-auto px-6">
+    <div class="bg-gray-800 rounded-xl p-8 shadow">
+      <h2 class="text-2xl font-semibold mb-4">Education & Certifications</h2>
+
+      <ul class="text-gray-300 space-y-2">
+        <li><strong>MBA</strong> — Middle East Technical University</li>
+        <li><strong>M.Sc.</strong> — Hacettepe University</li>
+        <li><strong>B.Eng.</strong> — Başkent University</li>
+        <li>AWS Certified Cloud Practitioner</li>
+        <li>Sandler Sales Training</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
 <!-- FOOTER -->
 <footer class="border-t border-gray-800 py-6 text-center text-sm text-gray-500">
   © 2026 Ismail Egilmez
 </footer>
 
-<!-- Icon button style -->
 <style>
   .icon-btn {
-    width: 44px;
-    height: 44px;
-    border-radius: 12px;
-    background: rgba(255,255,255,0.08);
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.1);
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: all .2s;
+    transition: all .2s ease;
   }
   .icon-btn:hover {
-    background: rgba(255,255,255,0.18);
+    background: rgba(255,255,255,0.2);
     transform: translateY(-2px);
   }
 </style>
